@@ -1,0 +1,340 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+/* Main Content Area */
+.app-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Cards and Containers */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+}
+
+/* Form Elements */
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Progress Components */
+.progress-bar {
+  height: 20px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+/* Achievement Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1c40f;
+  color: white;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Roadmap Styles */
+.roadmap-milestone {
+  border-left: 3px solid #3498db;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.roadmap-milestone::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  left: -11px;
+  top: 0;
+}
+
+.roadmap-milestone.completed {
+  border-left-color: #2ecc71;
+}
+
+.roadmap-milestone.completed::before {
+  background-color: #2ecc71;
+}
+
+/* Quiz Styles */
+.quiz-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-option {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+  background-color: #f8f9fa;
+}
+
+.quiz-option.selected {
+  background-color: #d6eaf8;
+  border-color: #3498db;
+}
+
+.quiz-option.correct {
+  background-color: #d5f5e3;
+  border-color: #2ecc71;
+}
+
+.quiz-option.incorrect {
+  background-color: #fadbd8;
+  border-color: #e74c3c;
+}
+
+/* Community Forum Styles */
+.forum-post {
+  border-bottom: 1px solid #ecf0f1;
+  padding: 1rem 0;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.post-author {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.post-date {
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.post-content {
+  margin-bottom: 0.5rem;
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.post-actions span {
+  cursor: pointer;
+}
+
+.post-actions span:hover {
+  color: #3498db;
+}
+
+/* Certificate Styles */
+.certificate {
+  background-color: white;
+  border: 10px solid #2c3e50;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.certificate h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.certificate h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #3498db;
+}
+
+.certificate-seal {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f39c12;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+/* Footer */
+.app-footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .app-header {
+    padding: 1rem;
+  }
+
+  .app-content {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
